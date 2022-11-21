@@ -1,5 +1,16 @@
+buildscript {
+    repositories {
+        //gradlePluginPortal()
+        //google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0-Beta")
+    }
+}
+
 plugins {
-    kotlin("multiplatform") version "1.6.21"
+    kotlin("multiplatform") version "1.8.0-Beta"
     application
 }
 
@@ -26,7 +37,6 @@ kotlin {
         binaries.executable()
         browser {
             commonWebpackConfig {
-                cssSupport.enabled = true
             }
         }
     }
